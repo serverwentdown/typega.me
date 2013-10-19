@@ -1,3 +1,4 @@
-.openshift
+.openshift/*
 .DS_STORE
 *.old
+.gitignore
