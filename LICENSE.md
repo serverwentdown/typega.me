@@ -1,4 +1,4 @@
-GNU GENERAL PUBLIC LICENSE
+                    GNU GENERAL PUBLIC LICENSE
                        Version 2, June 1991
 
  Copyright (C) 1989, 1991 Free Software Foundation, Inc.,
@@ -290,8 +290,8 @@ to attach them to the start of each source file to most effectively
 convey the exclusion of warranty; and each file should have at least
 the "copyright" line and a pointer to where the full notice is found.
 
-    The repository of typega.me
-    Copyright (C) 2013  a2y inc. 
+    typega.me - a typing game
+    Copyright (C) 2013  a2y inc.
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -312,7 +312,7 @@ Also add information on how to contact you by electronic and paper mail.
 If the program is interactive, make it output a short notice like this
 when it starts in an interactive mode:
 
-    Gnomovision version 69, Copyright (C) year name of author
+    Gnomovision version 69, Copyright (C) 2013 a2y inc.
     Gnomovision comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
     This is free software, and you are welcome to redistribute it
     under certain conditions; type `show c' for details.
@@ -329,7 +329,7 @@ necessary.  Here is a sample; alter the names:
   Yoyodyne, Inc., hereby disclaims all copyright interest in the program
   `Gnomovision' (which makes passes at compilers) written by James Hacker.
 
-  {signature of Ty Coon}, 1 April 1989
+  <signature of Ty Coon>, 1 April 1989
   Ty Coon, President of Vice
 
 This General Public License does not permit incorporating your program into
