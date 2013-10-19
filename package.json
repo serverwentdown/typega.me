@@ -1,0 +1,34 @@
+{
+  "name": "typega.me",
+  "version": "0.0.01",
+  "description": "typega.me",
+  "keywords": [
+    "game",
+    "serverside",
+    "highscores",
+    "ambc"
+  ],
+  "author": {
+    "name": "Ambrose Chua",
+    "email": "ambrose.chua.cm@gmail.com",
+    "url":  "http://typega.me/"
+  },
+  "homepage": "http://typega.me/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a2yinc/typega.me"
+  },
+
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+
+  "private": true,
+  "main": "server/server.js"
+}
