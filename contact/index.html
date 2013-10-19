@@ -55,22 +55,36 @@
 	li {
 		padding: 5px;
 	}
-	ol {
-		list-style-type: decimal;
-	}
-	ol ol {
-		list-style-type: lower-alpha;
-	}
 	section {
 		padding: 50px;
 		margin: 100px 0 20px 0;
 		background-color: rgba(105, 0, 255, 0.5);
 	}
 	.profile {
+		padding: 10px;
+		margin: 10px 0;
+		list-style: none;
+	}
+	.profile > div > h3 {
+		line-height: 1.2em;
+		font-size: 1.2em;
+	}
+	.profile > div {
+		padding: 30px;
+	}
+	.profile > div > p {
 		padding: 20px;
 	}
-	.profile > p {
-		padding: 20px;
+	.profile > div > ul {
+		list-style: disc;
+		padding: 0 160px;
+	}
+	.profile > img {
+		width: 100px;
+		height: 100px;
+		border-radius: 100px;
+		margin: 30px 30px 30px 30px;
+		float: left;
 	}
 	</style>
 </head>
@@ -85,29 +99,59 @@
 
 			<h1>Contact our creators</h1>
 
-			<h2>a2y inc. </h2>
 			<ul>
-				<li><label>GitHub</label> <span><a href="http://github.com/a2yinc">a2yinc</a></span></li>
-				<li><label>Twitter</label> <span><a href="http://twitter.com/a2yinc">@a2yinc</a></span></li>
-
 				<li class="profile">
-					<h3>Ambrose Chua <span>(ambc)</span></h3>
-					<p>Web developer, UX/UI designer. Likes awesome designs, and Google! </p>
-					<ul>
-						<li><label>Email</label> <span><a href="mailto:amb.ccm@gmail.com">amb.ccm@gmail.com</a></span></li>
-						<li><label>Gogole+</label> <span><a href="http://plus.google.com/116953171551478622938">+Ambrose Chua</a></span></li>
-						<li><label>Twitter</label> <span><a href="http://twitter.com/AmbC_Tec_CO">@AmbC_Tec_CO</a></span></li>
-						<li><label>Facebook</label> <span><a href="http://facebook.com/ambrose.chua.cm">ambrose.chua.cm</a></span></li>
-						<li><label>StackOverflow</label> <span><a href="http://stackoverflow.com/users/1716172/ambc">ambc</a></span></li>
-					</ul>
+					<img style="opacity: 0;" src="a2y.png" />
+					<div>
+						<h3>a<sub>2</sub>y inc. </h3>
+						<p>A group based in Singapore. ambc | goat | albert. </p>
+						<br clear="both" />
+						<ul>
+							<li><label>Site</label> <span><a href="http://a2y.uni.me/">a2y.uni.me</a></span></li>
+							<li><label>GitHub</label> <span><a href="http://github.com/a2yinc">a2yinc</a></span></li>
+							<li><label>Twitter</label> <span><a href="http://twitter.com/a2yinc">@a2yinc</a></span></li>
+							<li><label>Email</label> <span><a href="mailto:amb.ccm@gmail.com">amb.ccm@gmail.com</a></span></li>
+						</ul>
+					</div>
 				</li>
 				<li class="profile">
-					<h3>Yang Yeshuai <span>(goat)</span></h3>
-					<p>Goat goes...</p>
-					<ul>
-						<li><label>Twitter</label> <span><a href="http://twitter.com/AmbC_Tec_CO">@AmbC_Tec_CO</a></span></li>
-						<li><label>Facebook</label> <span><a href="http://facebook.com/ambrose.chua.cm">ambrose.chua.cm</a></span></li>
-					</ul>
+					<img src="ambc.png" />
+					<div>
+						<h3>Ambrose Chua <span>(ambc)</span></h3>
+						<p>Web developer, UX/UI designer. Likes awesome designs, and Google! </p>
+						<br clear="both" />
+						<ul>
+							<li><label>Email</label> <span><a href="mailto:amb.ccm@gmail.com">amb.ccm@gmail.com</a></span></li>
+							<li><label>Google+</label> <span><a href="http://plus.google.com/116953171551478622938">+Ambrose Chua</a></span></li>
+							<li><label>Twitter</label> <span><a href="http://twitter.com/AmbC_Tec_CO">@AmbC_Tec_CO</a></span></li>
+							<li><label>Facebook</label> <span><a href="http://facebook.com/ambrose.chua.cm">ambrose.chua.cm</a></span></li>
+							<li><label>StackOverflow</label> <span><a href="http://stackoverflow.com/users/1716172/ambc">ambc</a></span></li>
+						</ul>
+					</div>
+				</li>
+				<li class="profile">
+					<img src="goat.png" />
+					<div>
+						<h3>Yang Yeshuai <span>(goat)</span></h3>
+						<p>Hardware hacker. Makes PCs. </p>
+						<br clear="both" />
+						<ul>
+							<li><label>craigslist.com.sg</label> <span><a href="http://singapore.craigslist.com.sg/sys/4122891836.html">yang's main listing. </a></span></li>
+							<li><label>Facebook</label> <span><a href="https://www.facebook.com/yeshuai.yang">yeshuai.yang</a></span></li>
+						</ul>
+					</div>
+				</li>
+				<li class="profile">
+					<img src="albert.png" />
+					<div>
+						<h3>Albert Zhang</h3>
+						<p>The moon</p>
+						<br clear="both" />
+						<ul>
+							<li><label>Twitter</label> <span><a href="http://twitter.com/AmbC_Tec_CO">@AmbC_Tec_CO</a></span></li>
+							<li><label>Facebook</label> <span><a href="http://facebook.com/ambrose.chua.cm">ambrose.chua.cm</a></span></li>
+						</ul>
+					</div>
 				</li>
 			</ul>
 
