@@ -1,70 +1,212 @@
 <!DOCTYPE html>
-<html>
+<html><!-- manifest="typegame.appcache"> -->
 <head>
 	<meta charset="utf-8" />
 	<title>typega.me - type, type and type. </title>
+	<meta name="google-site-verification" content="-3fTIhmTL4ZA_9Iysrs7L5DBSwIhToML54dN0DQluvM" />
 	<meta property="og:title" content="typega.me - type, type and type. " />
 	<meta property="og:url" content="http://typega.me/" />
 	<meta property="og:image" content="images/icon240.png" />
 	<link rel="icon" href="images/icon16.png" type="image/png" />
-	<meta name="description" content="An awesome typing game by eurica inc. Type, type and type. Coming soon! " />
-	<meta name="author" content="eurica inc" />
-	<meta name="google-site-verification" content="-3fTIhmTL4ZA_9Iysrs7L5DBSwIhToML54dN0DQluvM" />
-	<style>
-	@import url(http://fonts.googleapis.com/css?family=Lato:100);
-	* {
-		padding: 0;
-		margin: 0;
-	}
-	body {
-		padding: 100px 0;
-		font-family:'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
-		-webkit-font-smoothing: antialiased;
-		background-color: #fff;
-		font-size: 25px;
-		color: #fff;
-	}
-	h1, h2, h3, h4, h5 {
-		font-weight: 100;
-		line-height: 1em;
-	}
-	h1 {
-		text-align: right;
-	}
-	h2 {
-		text-align: left;
-	}
-	span {
-		color: #fff;
-		padding: 20px;
-		display: inline-block;
-	}
-	h1 span {
-		padding-left: 150px;
-		background-color: rgba(235, 0, 255, 0.5);
-	}
-	h2 span {
-		background-color: rgba(105, 0, 255, 0.5);
-	}
-	h3 {
-		font-size: 1.1em;
-	}
-	h3 span {
-		background-color: rgba(105, 0, 255, 0.5);
-	}
-	section {
-		padding: 50px;
-		margin: 100px 0 20px 0;
-		background-color: rgba(105, 0, 255, 0.5);
-	}
-	</style>
+	<meta name="description" content="A typing game by a2y inc. play now! " />
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/fonts.css" />
 </head>
-<body>
-	<h1><span>typega.me</span></h1>
-	<h2><span>coming soon</span></h2>
-	<section>
-		an awesome typing game by eurica inc. type, type and type. get ready! <a href="/request.html">request beta</a> if you're enthusiastic! 
-	</section><!-- https://docs.google.com/forms/d/1mLq0mwyt8i9xQEJkCvMoShu3cwJb2AHppb_8sg8B3_s/viewform -->
+<body class="menuopen">
+	<!-- <div id="fb-root"></div>
+	<script>
+	window.fbAsyncInit = function() {
+		// init the FB JS SDK
+		FB.init({
+			appId      : 'YOUR_APP_ID',                        // App ID from the app dashboard
+			channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel file for x-domain comms
+			status     : true,                                 // Check Facebook Login status
+			xfbml      : true                                  // Look for social plugins on the page
+		});
+
+		// Additional initialization code such as adding Event Listeners goes here
+	};
+
+	// Load the SDK asynchronously
+	(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		 js.src = "//connect.facebook.net/en_US/all.js";
+		 fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script> -->
+	<div id="sidebar">
+		<h1><span onclick="scrambleDocument();">typega.me</span> <a href="#" id="play">play <span class="tyicon-play"><!-- &#9654; --><span></a></h1>
+		<div id="stats">
+			<div class="timeh">
+				<label>time: </label><span id="time"><span id="timem">00</span>:<span id="times">00</span><span id="timems">00</span></span>
+			</div>
+			<div class="pointsh">
+				<label>points: </label><span id="points">0</span>
+			</div>
+			<div class="levelsh">
+				<label>level: </label><span id="levels">2</span>
+			</div>
+			<div class="correcth">
+				<label>correct: </label><span id="correct">100</span>
+			</div>
+			<div class="incorrecth">
+				<label>incorrect: </label><span id="incorrect">20</span>
+			</div>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="#" id="login">sign in</a></li>
+				<li><a href="#" id="compete">compete</a></li>
+				<li><a href="#" id="worldscores">worldwide highscores</a></li>
+				<li><a href="#" id="friendscores">friends's highscores</a></li>
+				<!-- <li><a href="#" id="yourscores">your highscores</a></li> -->
+				<li><a href="#" id="about">options</a></li>
+			</ul>
+		</div>
+		<!-- <footer>
+				By a<sub>2</sub>y inc. Background music "Battle Rock" by <a href="http://gplus.to/guiltypixel">GuiltyPixel</a>. 
+			</footer> -->
+	</div>
+	<div id="wordsh">
+		<div class="timespenth"><span class="timespent" id="timespent"> </span></div>
+		<div id="mainword">
+			<!-- <span class="maindone">done</span> -->
+			<span class="main">typega.me</span>
+			<span class="maincome">play now</span>
+		</div>
+		<div id="mainwordblock">
+		</div>
+		<div id="words">
+			<!-- <span class="w1">hello</span>
+			<span class="w2">world</span>
+			<span class="w3">hello</span>
+			<span class="w4">done</span>-->
+			<span class="w5">typega.me</span>
+			<span class="w6">play now</span>
+			<span class="w7">typegame</span>
+			<span class="w8">typing</span>
+			<span class="w9">fast</span>
+			<span class="w10">keyboard</span>
+		</div>
+		<div id="remarksh">
+			
+		</div>
+	</div>
+	<div class="popup" style="display: block;" id="status">
+		<span>loading</span><div class="loadingdots showloadingdots"></div>
+	</div>
+	<div class="popup" id="loginmenu">
+		<h2>sign in to typega.me</h2>
+		<h3>with google</h3>
+		<span id="signinButton">
+		  <span
+		    class="g-signin"
+		    data-callback="signinCallback"
+		    data-clientid="519814078940.apps.googleusercontent.com"
+		    data-cookiepolicy="single_host_origin"
+		    data-requestvisibleactions="http://schemas.google.com/AddActivity"
+		    data-scope="https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/drive.appdata">
+		  </span>
+		</span>
+		<!-- <h3>Facebook</h3> -->
+		<span class="button close">&#10005;</span>
+	</div>
+	<div class="popup" id="aboutmenu">
+		<h2>about typega.me</h2>
+		<h3>by eureca inc. </h3>
+		<a href="contact/" class="button">contact us</a><br />
+		<a href="terms/" class="button">terms of service</a><br />
+		<a href="privacy/" class="button">privacy policy</a><br />
+		<a href="http://github.com/a2yinc/typega.me" class="button">github <span class="tyicon-github"></span></a><br />
+		<span class="button close">&#10005;</span>
+	</div>
+	<div class="popup" id="results">
+		<h2>your score: <span id="resultpoints"></span></h2>
+		<h3>share</h3>
+		<a href="#" id="sharegoogleplus" class="tyicon-circle-google-plus">google+</a><br />
+		<a href="#" id="sharetwitter" class="tyicon-circle-twitter">twitter</a><br />
+		<a href="#" id="sharefacebook" class="tyicon-circle-facebook">facebook</a><br />
+		<a href="#" class="button" id="replay">replay <span class="tyicon-spinner"><!-- &#x21bb; --><span></a><br />
+		<a href="#" class="button" id="home">home <span class="tyicon-home"><span></a>
+	</div>
+	<div class="dude" id="me" style="display: none;">
+		<div class="mydetails">
+			<span id="myname"></span>
+			<span id="logout">logout</span>
+			<img src="" id="myprofileimage" />
+		</div>
+		<div class="mygames">
+			<div class="mygamesheader">
+				<h3>my games</h3>
+				<ul>
+					<li id="graphview" class="active tyicon-stats" title="graph view"></li>
+					<li id="listview" class="tyicon-list" title="list view"></li>
+				</ul>
+			</div>
+			<div id="mychart">
+				<canvas id="mygameschart" width="600" height="300"><h4>charts are not working! </h4></canvas>
+			</div>
+			<div id="mytable">
+				<table>
+					<thead>
+						<tr>
+							<th title="points">pts.</th>
+							<th title="incorrect">incr.</th>
+							<th title="time taken">took</th>
+							<th>timestamp</th>
+						</tr>
+					</thead>
+					<tbody id="mygamestable">
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="too-small">
+		<h2>ow! gimme a little more space. thanks! </h2>
+	</div>
+
+	<div id="not-supported">
+		<h2>some stuff does not work on your browser. upgrade to a better one! <a href="https://google.com/chrome">Google Chrome</a></h2>
+	</div>
+
+
+		<!-- <audio src="sounds/background.mp3" autoplay="true">
+	</audio> -->
+	<!-- Place this asynchronous JavaScript just before your </body> tag -->
+    <script type="text/javascript">
+      (function() {
+       var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+       po.src = 'https://apis.google.com/js/client:plusone.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+     })();
+    </script>
+	<script src="js/keycodes.json"></script>
+	<script src="js/words.js"></script>
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/Chart.min.js"></script>
+	<script src="js/modernizr.js"></script>
+	<script type="text/javascript">
+	var ie = (function(){
+	    var undef,
+	        v = 3,
+	        div = document.createElement('div'),
+	        all = div.getElementsByTagName('i');
+	    while (
+	        div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->', all[0]
+	    );
+	    return v > 4 ? v : undef;
+	}());
+	if (ie < 9) {
+		alert("IE8, IE7, IE6 and lower is not supported by typega.me. That means you're a loser :) Upgrade your browser! (maybe Google Chrome)");
+	}
+	</script>
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -73,5 +215,6 @@
 		ga('create', 'UA-45053637-1', 'typega.me');
 		ga('send', 'pageview');
 	</script>
+	<script src="js/prefixfree.min.js"></script>
 </body>
 </html>
